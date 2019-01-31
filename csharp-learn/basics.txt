@@ -1,0 +1,151 @@
+Variables and Data Types in C#
+In C#, variables are used to store data, and each variable has a specific data type that determines what kind of values it can hold.
+
+1️⃣ Declaring and Initializing Variables
+To declare a variable in C#, use the following syntax:
+
+csharp
+Copy
+Edit
+<data_type> <variable_name> = <value>;
+Example:
+
+csharp
+Copy
+Edit
+int age = 25;
+string name = "John";
+If you don’t want to initialize immediately:
+
+csharp
+Copy
+Edit
+double price;  // Declaration
+price = 99.99; // Assignment later
+2️⃣ Common Data Types in C#
+C# has several built-in data types, categorized as value types and reference types.
+
+✅ Value Types (Stored in Stack)
+Value types store actual data, not references.
+
+Data Type	Description	Example
+int	Whole numbers	int x = 10;
+double	Decimal numbers (64-bit)	double pi = 3.14;
+float	Smaller decimal numbers (32-bit)	float price = 9.99f;
+decimal	High precision decimal (for money)	decimal salary = 1000.50m;
+char	Single character	char grade = 'A';
+bool	Boolean (true/false)	bool isActive = true;
+Example:
+
+csharp
+Copy
+Edit
+int count = 100;
+float percentage = 75.5f;
+bool isAvailable = true;
+✅ Reference Types (Stored in Heap)
+Reference types store a reference (memory address) instead of actual data.
+
+Data Type	Description	Example
+string	Sequence of characters	string name = "Alice";
+object	Base type of all data types	object obj = "Hello";
+dynamic	Can hold any type (determined at runtime)	dynamic val = 5; val = "Now a string";
+Example:
+
+csharp
+Copy
+Edit
+string message = "Hello, C#";
+object data = 42;
+dynamic flexible = 10.5;  // Can be changed later
+3️⃣ var and dynamic (Flexible Types)
+🔹 var (Compile-time Type Inference)
+Type is inferred at compile time.
+Cannot change type after assignment.
+csharp
+Copy
+Edit
+var number = 100;  // Treated as int
+var text = "Hello"; // Treated as string
+🔹 dynamic (Runtime Type Inference)
+Type is determined at runtime.
+Can change type after assignment.
+csharp
+Copy
+Edit
+dynamic anything = 50;
+anything = "Now I'm a string!";
+4️⃣ Nullable Types (?)
+By default, value types cannot be null, but you can make them nullable:
+
+csharp
+Copy
+Edit
+int? age = null;
+double? height = 180.5;
+bool? isOnline = null;
+5️⃣ Constants and Readonly Variables
+const: Value must be assigned at declaration and cannot change.
+readonly: Can be assigned in a constructor but not changed later.
+csharp
+Copy
+Edit
+const double Pi = 3.14159;
+readonly int maxUsers;
+6️⃣ Implicit and Explicit Type Conversion
+🔹 Implicit Conversion (Safe)
+C# automatically converts smaller types to larger types.
+
+csharp
+Copy
+Edit
+int num = 100;
+double bigNum = num; // Implicit conversion (safe)
+🔹 Explicit Conversion (Casting)
+When converting a larger type to a smaller type, you need explicit casting.
+
+csharp
+Copy
+Edit
+double price = 99.99;
+int wholePrice = (int) price; // Explicit casting
+You can also use Convert:
+
+csharp
+Copy
+Edit
+string strNumber = "123";
+int num = Convert.ToInt32(strNumber);
+7️⃣ Example Code
+csharp
+Copy
+Edit
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int age = 30;
+        double salary = 5000.75;
+        string name = "Alice";
+        bool isEmployed = true;
+
+        Console.WriteLine($"Name: {name}, Age: {age}, Salary: ${salary}, Employed: {isEmployed}");
+    }
+}
+📝 Summary
+✅ Value Types: int, double, char, bool, etc.
+✅ Reference Types: string, object, dynamic
+✅ Implicit & Explicit Conversions
+✅ var (Compile-time) vs dynamic (Runtime)
+✅ const vs readonly
+✅ Nullable Types (int?)
+
+
+
+
+
+
+
+
