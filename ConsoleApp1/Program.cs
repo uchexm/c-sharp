@@ -1,27 +1,14 @@
-﻿public class Program
-{
-    public static int FindMax(int[] numbers)
-    {
-         if (numbers == null || numbers.Length == 0)
-        {
-            throw new ArgumentException("The array must contain at least one element.");
-        }
-        
-        int max = numbers[0];
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            if (numbers[i] > max)
-            {
-                max = numbers[i];
-            }
-        }
-        return max;
-    }
+﻿int age = 23;
+Console.WriteLine("I am " + age + " years old.");
 
-    public static void Main()
-    {
-        int[] myNumbers = { -5, -10, -3, -8, -2 };
-        int maxNumber = FindMax(myNumbers);
-        Console.WriteLine("The maximum number is: " + maxNumber);
-    }
-}
+float pi = 3.14e30f;
+Console.WriteLine("Pi is approximately " + pi);
+
+double temperature = 37.5;
+Console.WriteLine("The temperature is " + temperature + " degrees.");
+
+char dollar = '$';
+Console.WriteLine("The dollar sign is " + dollar);
+
+string name = "John Doe";
+Console.WriteLine("My name is " + name);
