@@ -1,71 +1,72 @@
-﻿// using System.Security.Cryptography.X509Certificates;
+﻿public class ToDoList
+{
 
-public class TodoList {
-    
-    string[] tasks = new string[10];
-    int taskCount = 0;
-    public void AddTask() {
-         if (taskCount < tasks.Length) {
-         Console.Write("Enter a task: ");
-        string task = Console.ReadLine();
-        tasks[taskCount] = task;
+    public static string[] tasks = new string[10];
+    public static int taskCount = 0;
+
+   public static void AddTask()
+    {
+        Console.WriteLine("Enter a new task:");
+        tasks[taskCount] = Console.ReadLine();
         taskCount++;
-            
-         } else {
-             Console.WriteLine("Task list is full.");
-        }
-        
     }
-    public void ViewTasks(){
-            Console.WriteLine("Task List:");
-            for (int i = 0; i < taskCount; i++) {
-                Console.WriteLine($"{i + 1}. {tasks[i]}");
-            }
-           
+
+public static void ViewTasks()
+    {
+        for (int i = 0; i < taskCount; i++)
+        {
+            Console.WriteLine((i + 1) + ". " + tasks[i]);
         }
-    public void CompleteTask(){
-        Console.Write("Enter the task number to complete: ");
-        int taskNumber = Convert.ToInt32(Console.ReadLine()) - 1;
-        if (taskNumber >= 0 && taskNumber < taskCount) {
-            tasks[taskNumber] = null;
-            for (int i = taskNumber; i < taskCount - 1; i++) {
-                tasks[i] = tasks[i + 1];
-            }
-            taskCount--;
-            Console.WriteLine("Task completed.");
-        } else {
+    }
+
+public static void CompleteTask()
+    {
+        Console.WriteLine("Enter the number of the task to mark as complete:");
+        int taskNumber = int.Parse(Console.ReadLine()) - 1;
+
+        if (taskNumber >= 0 && taskNumber < taskCount)
+        {
+            tasks[taskNumber] = tasks[taskNumber] + " (Completed)";
+            Console.WriteLine("Task marked as complete.");
+        }
+        else
+        {
             Console.WriteLine("Invalid task number.");
         }
+    }
 
+    public static void Main(string[] args)
+    {
+        bool running = true;
 
-     
-    }   
-    public static void Main(string[] args) {
-        TodoList todoList = new TodoList();
-        while (true) {
-            Console.WriteLine("1. Add Task");
-            Console.WriteLine("2. View Tasks");
-            Console.WriteLine("3. Complete Task");
+        while (running)
+        {
+            Console.WriteLine("What would you like to do?");
+            Console.WriteLine("1. Add a task");
+            Console.WriteLine("2. View tasks");
+            Console.WriteLine("3. Mark a task as complete");
             Console.WriteLine("4. Exit");
-            Console.Write("Enter your choice: ");
-            int choice = Convert.ToInt32(Console.ReadLine());
-            switch (choice) {
-                case 1:
-                    todoList.AddTask();
+
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    AddTask();
                     break;
-                case 2:
-                    todoList.ViewTasks();
+                case "2":
+                    ViewTasks();
                     break;
-                case 3:
-                    todoList.CompleteTask();
+                case "3":
+                    CompleteTask();
                     break;
-                case 4:
-                    return;
+                case "4":
+                    running = false;
+                    break;
                 default:
-                    Console.WriteLine("Invalid choice.");
+                    Console.WriteLine("Invalid choice. Please try again.");
                     break;
             }
         }
     }
 }
-   
