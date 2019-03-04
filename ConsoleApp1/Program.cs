@@ -1,72 +1,25 @@
-﻿public class ToDoList
-{
-
-    public static string[] tasks = new string[10];
-    public static int taskCount = 0;
-
-   public static void AddTask()
-    {
-        Console.WriteLine("Enter a new task:");
-        tasks[taskCount] = Console.ReadLine();
-        taskCount++;
-    }
-
-public static void ViewTasks()
-    {
-        for (int i = 0; i < taskCount; i++)
+﻿namespace Exercise {
+    class Program{
+        static void Main(string[] args)
         {
-            Console.WriteLine((i + 1) + ". " + tasks[i]);
-        }
-    }
+            Console.Write("Enter the first number: ");
 
-public static void CompleteTask()
-    {
-        Console.WriteLine("Enter the number of the task to mark as complete:");
-        int taskNumber = int.Parse(Console.ReadLine()) - 1;
+            int firstNumber = Convert.ToInt32(Console.ReadLine());
 
-        if (taskNumber >= 0 && taskNumber < taskCount)
-        {
-            tasks[taskNumber] = tasks[taskNumber] + " (Completed)";
-            Console.WriteLine("Task marked as complete.");
-        }
-        else
-        {
-            Console.WriteLine("Invalid task number.");
-        }
-    }
 
-    public static void Main(string[] args)
-    {
-        bool running = true;
+            Console.Write("Enter the second number: ");
 
-        while (running)
-        {
-            Console.WriteLine("What would you like to do?");
-            Console.WriteLine("1. Add a task");
-            Console.WriteLine("2. View tasks");
-            Console.WriteLine("3. Mark a task as complete");
-            Console.WriteLine("4. Exit");
+            int secondNumber = Convert.ToInt32(Console.ReadLine());
 
-            string choice = Console.ReadLine();
+            int sum = firstNumber + secondNumber;
+            Console.WriteLine($"The sum of {firstNumber} and {secondNumber} is {sum}");
 
-            switch (choice)
-            {
-                case "1":
-                    AddTask();
-                    break;
-                case "2":
-                    ViewTasks();
-                    break;
-                case "3":
-                    CompleteTask();
-                    break;
-                case "4":
-                    running = false;
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice. Please try again.");
-                    break;
-            }
+            int multiply = firstNumber * secondNumber;
+            Console.WriteLine($"The multiple of {firstNumber} and {secondNumber} is {multiply}");
+
+            int difference = firstNumber - secondNumber;
+            Console.WriteLine($"The difference of {firstNumber} and {secondNumber} is {difference}");
+
         }
     }
 }
