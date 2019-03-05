@@ -11,14 +11,33 @@
 
             int secondNumber = Convert.ToInt32(Console.ReadLine());
 
-            int sum = firstNumber + secondNumber;
-            Console.WriteLine($"The sum of {firstNumber} and {secondNumber} is {sum}");
+            int answer = firstNumber * secondNumber;
 
-            int multiply = firstNumber * secondNumber;
-            Console.WriteLine($"The multiple of {firstNumber} and {secondNumber} is {multiply}");
+            Console.WriteLine("Value of " + firstNumber + " X " + secondNumber + " : " );
+            string answerString = Console.ReadLine();
 
-            int difference = firstNumber - secondNumber;
-            Console.WriteLine($"The difference of {firstNumber} and {secondNumber} is {difference}");
+            int actualValue = Convert.ToInt32(answerString);
+
+            if (actualValue == answer)
+            {
+                Console.WriteLine("Correct!");
+            }
+            else
+            {
+                Console.WriteLine("Incorrect!");
+            }
+
+
+
+
+            // int sum = firstNumber + secondNumber;
+            // Console.WriteLine($"The sum of {firstNumber} and {secondNumber} is {sum}");
+
+            // int multiply = firstNumber * secondNumber;
+            // Console.WriteLine($"The multiple of {firstNumber} and {secondNumber} is {multiply}");
+
+            // int difference = firstNumber - secondNumber;
+            // Console.WriteLine($"The difference of {firstNumber} and {secondNumber} is {difference}");
 
         }
     }
