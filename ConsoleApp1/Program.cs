@@ -1,22 +1,52 @@
-﻿namespace Exercise {
+﻿using System.Formats.Asn1;
+
+namespace Exercise {
     class Program{
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter a word you want to repeat: ");
-            string word = Console.ReadLine();
+            // Console.WriteLine("Enter a word you want to repeat: ");
+            // string word = Console.ReadLine();
 
-            Console.WriteLine("Enter the number of times you want to repeat the word: ");
-            int times = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("Enter the number of times you want to repeat the word: ");
+            // int times = Convert.ToInt32(Console.ReadLine());
 
             
-                if (times == 0) {
-                    Console.WriteLine("Invalid number of times please enter a number more than 0");
-                } else {
-                    for (int i = 0; i <times; ++i){
-                        Console.WriteLine(word);
-                    }
+            //     if (times == 0) {
+            //         Console.WriteLine("Invalid number of times please enter a number more than 0");
+            //     } else {
+            //         for (int i = 0; i <times; ++i){
+            //             Console.WriteLine(word);
+            //         }
+            //     }
+
+            Console.WriteLine("Welcome to the multiplication game BOOM BOOM!!!");
+            Console.WriteLine("Choose your first number: ");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Choose your second number: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            int answer = num1 * num2;
+
+            Console.WriteLine("What is the value of " + num1 + " X " + num2 + " ? ");
+            Console.WriteLine("Enter Your Answer: ");
+            int userAnswer = Convert.ToInt32(Console.ReadLine());
+
+            while (userAnswer != answer)
+            {   
+                Console.WriteLine("Enter Your Answer: ");
+               
+                userAnswer = Convert.ToInt32(Console.ReadLine());
+
+                if (userAnswer!= answer)
+                {
+                    Console.WriteLine("Sorry, that's not correct. Try again.");
+                    System.Console.WriteLine();
                 }
+            } Console.WriteLine("Yay! you got it the answer is: " + "(" + answer +")");
+
+
             
 
 
