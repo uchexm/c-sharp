@@ -20,31 +20,52 @@ namespace Exercise {
             //         }
             //     }
 
-            Console.WriteLine("Welcome to the multiplication game BOOM BOOM!!!");
-            Console.WriteLine("Choose your first number: ");
-            int num1 = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("Welcome to the multiplication game BOOM BOOM!!!");
+            // Console.WriteLine("Choose your first number: ");
+            // int num1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Choose your second number: ");
-            int num2 = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("Choose your second number: ");
+            // int num2 = Convert.ToInt32(Console.ReadLine());
 
-            int answer = num1 * num2;
+            // int answer = num1 * num2;
 
-            Console.WriteLine("What is the value of " + num1 + " X " + num2 + " ? ");
-            Console.WriteLine("Enter Your Answer: ");
-            int userAnswer = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("What is the value of " + num1 + " X " + num2 + " ? ");
+            // Console.WriteLine("Enter Your Answer: ");
+            // int userAnswer = Convert.ToInt32(Console.ReadLine());
 
-            while (userAnswer != answer)
-            {   
-                Console.WriteLine("Enter Your Answer: ");
+            // while (userAnswer != answer)
+            // {   
+            //     Console.WriteLine("Enter Your Answer: ");
                
-                userAnswer = Convert.ToInt32(Console.ReadLine());
+            //     userAnswer = Convert.ToInt32(Console.ReadLine());
 
-                if (userAnswer!= answer)
+            //     if (userAnswer!= answer)
+            //     {
+            //         Console.WriteLine("Sorry, that's not correct. Try again.");
+            //         System.Console.WriteLine();
+            //     }
+            // } Console.WriteLine("Yay! you got it the answer is: " + "(" + answer +")");
+
+            bool success = true;
+
+            while (success)
+            {
+                Console.WriteLine("Enter a number: ");
+                string numberInput = Console.ReadLine();
+
+                if (int.TryParse(numberInput, out int number))
                 {
-                    Console.WriteLine("Sorry, that's not correct. Try again.");
-                    System.Console.WriteLine();
+                    Console.WriteLine("You entered a number: " + number);
+                    success = false;
                 }
-            } Console.WriteLine("Yay! you got it the answer is: " + "(" + answer +")");
+                else
+                {
+                    Console.WriteLine("You entered an invalid number Please try again.");
+                }
+
+                
+            }
+            Console.ReadLine();
 
 
             
