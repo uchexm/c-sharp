@@ -46,26 +46,35 @@ namespace Exercise {
             //     }
             // } Console.WriteLine("Yay! you got it the answer is: " + "(" + answer +")");
 
-            bool success = true;
+            // bool success = true;
 
-            while (success)
-            {
-                Console.WriteLine("Enter a number: ");
-                string numberInput = Console.ReadLine();
+            // while (success)
+            // {
+            //     Console.WriteLine("Enter a number: ");
+            //     string numberInput = Console.ReadLine();
 
-                if (int.TryParse(numberInput, out int number))
-                {
-                    Console.WriteLine("You entered a number: " + number);
-                    success = false;
-                }
-                else
-                {
-                    Console.WriteLine("You entered an invalid number Please try again.");
-                }
+            //     if (int.TryParse(numberInput, out int number))
+            //     {
+            //         Console.WriteLine("You entered a number: " + number);
+            //         success = false;
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine("You entered an invalid number Please try again.");
+            //     }
 
                 
+            // }
+            // Console.ReadLine();
+            //Console.WriteLine("Welcome to the number table BOOM BOOM!!!");
+
+            Console.WriteLine("Enter a number for our table: ");
+            int userNumber = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 1; i < 9; i++)
+            {
+                Console.WriteLine("{0} x {1} = {2}", i, userNumber, i * userNumber);
             }
-            Console.ReadLine();
 
 
             
