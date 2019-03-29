@@ -68,13 +68,50 @@ namespace Exercise {
             // Console.ReadLine();
             //Console.WriteLine("Welcome to the number table BOOM BOOM!!!");
 
-            Console.WriteLine("Enter a number for our table: ");
-            int userNumber = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("Enter a number for our table: ");
+            // int userNumber = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 1; i < 9; i++)
-            {
-                Console.WriteLine("{0} x {1} = {2}", i, userNumber, i * userNumber);
-            }
+            // for (int i = 1; i <= 9; i++)
+            // {
+            //     Console.WriteLine("{0} x {1} = {2}", i, userNumber, i * userNumber);
+            // }
+
+            Console.WriteLine("Welcome to FizzBuzz!");
+
+            // for (int i = 1; i <= 15; ++i) {
+            //    if (3 % i == 0 && 5 % i == 0){
+            //         Console.WriteLine("FizzBuzz");
+            //     }
+            //     else if (3 % i == 0){
+            //      Console.WriteLine("Fizz");
+            //     }
+            //     else if (5 % i == 0){
+            //       Console.WriteLine("Buzz");
+            //     }
+            //     else{
+            //        Console.WriteLine(i);
+
+            //     }
+            // }
+
+             for (int i = 1; i <= 15; i++){
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+             }
 
 
             
