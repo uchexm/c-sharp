@@ -93,17 +93,23 @@ namespace Exercise {
 
             //     }
             // }
-
+            //bool divideByThree = false;
+            //bool divideByFive = false;
+         
              for (int i = 1; i <= 25; ++i){
-                if (i % 3 == 0 && i % 5 == 0)
+
+               bool divideByThree = i % 3 == 0;
+               bool  divideByFive = i % 5 == 0;
+
+                if (divideByThree && divideByFive)
                 {
                     Console.WriteLine("FizzBuzz");
                 }
-                else if (i % 3 == 0)
+                else if (divideByThree)
                 {
                     Console.WriteLine("Fizz");
                 }
-                else if (i % 5 == 0)
+                else if (divideByFive)
                 {
                     Console.WriteLine("Buzz");
                 }
