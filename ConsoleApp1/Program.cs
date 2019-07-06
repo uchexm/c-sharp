@@ -76,7 +76,7 @@ namespace Exercise {
             //     Console.WriteLine("{0} x {1} = {2}", i, userNumber, i * userNumber);
             // }
 
-            Console.WriteLine("Welcome to FizzBuzz!");
+            //Console.WriteLine("Welcome to FizzBuzz!");
 
             // for (int i = 1; i <= 15; ++i) {
             //    if (3 % i == 0 && 5 % i == 0){
@@ -96,30 +96,42 @@ namespace Exercise {
             //bool divideByThree = false;
             //bool divideByFive = false;
          
-             for (int i = 1; i <= 25; ++i){
+            //  for (int i = 1; i <= 25; ++i){
 
-               bool divideByThree = i % 3 == 0;
-               bool  divideByFive = i % 5 == 0;
+            //    bool divideByThree = i % 3 == 0;
+            //    bool  divideByFive = i % 5 == 0;
 
-                if (divideByThree && divideByFive)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if (divideByThree)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if (divideByFive)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
-             }
+            //     if (divideByThree && divideByFive)
+            //     {
+            //         Console.WriteLine("FizzBuzz");
+            //     }
+            //     else if (divideByThree)
+            //     {
+            //         Console.WriteLine("Fizz");
+            //     }
+            //     else if (divideByFive)
+            //     {
+            //         Console.WriteLine("Buzz");
+            //     }
+            //     else
+            //     {
+            //         Console.WriteLine(i);
+            //     }
+            //  }
 
+            Console.Write("Enter a message: ");
+            string message = Console.ReadLine();
 
+            if (message != null){
+                for (int i = 0; i < message.Length; i++){
+                  Console.WriteLine(message[i]);
+                  }
+                for (int i = message.Length - 1; i >= 0; i--){
+                  Console.WriteLine(message[i]);
+                }
+            
+
+            }
             
 
 
