@@ -119,20 +119,61 @@ namespace Exercise {
             //     }
             //  }
 
-            Console.Write("Enter a message: ");
-            string message = Console.ReadLine();
+            // Console.Write("Enter a message: ");
+            // string message = Console.ReadLine();
 
-            if (message != null){
-                for (int i = 0; i < message.Length; i++){
-                  Console.WriteLine(message[i]);
-                  }
-                for (int i = message.Length - 1; i >= 0; i--){
-                  Console.WriteLine(message[i]);
+            // if (message != null){
+            //     for (int i = 0; i < message.Length; i++){
+            //       Console.WriteLine(message[i]);
+            //       }
+            //     for (int i = message.Length - 1; i >= 0; i--){
+            //       Console.WriteLine(message[i]);
+            //     }
+            
+
+            // }
+            
+            // Console.WriteLine("Enter your password: ");
+            // string password = Console.ReadLine();
+
+            // Console.WriteLine("Enter your password again: ");
+            // string password2 = Console.ReadLine();
+
+            // if (!password.Equals(string.Empty) && !password2.Equals(string.Empty) ){
+            //     if (password == password2){
+            //         Console.WriteLine("Password Matched!");
+            //     }
+            //     else{
+            //         Console.WriteLine("Password did not match!");
+            //     }
+            // }
+            // else{
+            //     Console.WriteLine("Please enter password");
+            // }
+            Console.WriteLine("Enter your password again: ");
+            string password = Console.ReadLine();
+
+            Console.WriteLine("Enter your password again: ");
+            string password2 = Console.ReadLine();
+
+            if (!password.Equals(string.Empty)){
+                if (!password2.Equals(string.Empty)){
+                    if (password.Length >= 8 && password2.Length >= 8){
+                        if (password == password2){
+                        Console.WriteLine("Password Matched!");
+                    }
+                    else{
+                        Console.WriteLine("Password did not match!");
+                    }
+                    
                 }
-            
-
+                else{
+                    Console.WriteLine("Password must be at least 8 characters long");
+                }
             }
-            
+            else{
+                Console.WriteLine("Please enter password");
+            }
 
 
 
@@ -140,7 +181,7 @@ namespace Exercise {
 
 
 
-
+    }
 
 
 
