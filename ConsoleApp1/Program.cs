@@ -176,17 +176,43 @@ namespace Exercise {
             
 
     // }
-             int[] numbers = new int[5];
+             int[] numbers = new int[4];
 
-                numbers[0] = 10;
-                numbers[1] = 20;
-                numbers[2] = 30;
-                numbers[3] = 40;
-                numbers[4] = 50;
+             for (int i = 0; i < numbers.Length; i++){
+                 Console.WriteLine("Enter a number: ");
+                 numbers[i] = Convert.ToInt32(Console.ReadLine());
+             }
+             
 
-                for (int i = 0; i < numbers.Length; ++i){
-                    Console.WriteLine(numbers[i]);  
-                }
+             for (int i = 0; i < numbers.Length; i++){
+                
+                Console.WriteLine(numbers[i]);
+             }
+
+            //  Console.WriteLine("Enter a number: ");
+            //  numbers[0] = Convert.ToInt32(Console.ReadLine());
+
+            //  Console.WriteLine("Enter a number: ");
+            //  numbers[1] = Convert.ToInt32(Console.ReadLine());
+
+            //  Console.WriteLine("Enter a number: ");
+            //  numbers[2] = Convert.ToInt32(Console.ReadLine());
+
+            //  Console.WriteLine("Enter a number: ");
+            //  numbers[3] = Convert.ToInt32(Console.ReadLine());
+
+
+            //  Console.WriteLine("The numbers you entered are: " + numbers[0] + ", " + numbers[1] + ", " + numbers[2] + ", " + numbers[3]);
+
+                // numbers[0] = 10;
+                // numbers[1] = 20;
+                // numbers[2] = 30;
+                // numbers[3] = 40;
+                // numbers[4] = 50;
+
+                // for (int i = 0; i < numbers.Length; ++i){
+                //     Console.WriteLine(numbers[i]);  
+                // }
             
 
 
