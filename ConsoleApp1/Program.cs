@@ -175,19 +175,30 @@ namespace Exercise {
     //             Console.WriteLine("Please enter password");
             
 
-    // }
-             int[] numbers = new int[4];
+    // // }
 
-             for (int i = 0; i < numbers.Length; i++){
-                 Console.WriteLine("Enter a number: ");
-                 numbers[i] = Convert.ToInt32(Console.ReadLine());
-             }
+    List<string> names = new List<string>();
+    Console.WriteLine("Enter a name: ");
+    names.Add(Console.ReadLine());
+    for (int i = 0; i < names.Count; i++){
+       Console.WriteLine(names[i]);
+    }
+
+
+
+
+    //          int[] numbers = new int[4];
+
+    //          for (int i = 0; i < numbers.Length; i++){
+    //              Console.WriteLine("Enter a number: ");
+    //              numbers[i] = Convert.ToInt32(Console.ReadLine());
+    //          }
              
 
-             for (int i = 0; i < numbers.Length; i++){
+    //          for (int i = 0; i < numbers.Length; i++){
                 
-                Console.WriteLine(numbers[i]);
-             }
+    //             Console.WriteLine(numbers[i]);
+    //          }
 
             //  Console.WriteLine("Enter a number: ");
             //  numbers[0] = Convert.ToInt32(Console.ReadLine());
