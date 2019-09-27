@@ -132,7 +132,41 @@ namespace Exercise {
             
 
             // }
-            
+            // Dictionary<string, string> user = new Dictionary<string, string>
+            // {
+            //     {"username", "admin"},
+            //     {"password", "password"}
+            // };
+            List<int> evenNumbers = new List<int>();
+
+            List<int> oddNumbers = new List<int>();
+
+            for (int i = 1; i <= 40; i++){
+                if (i % 2 == 0){
+                    evenNumbers.Add(i);
+                   // Console.WriteLine("Even numbers" + i);
+                }
+                else{
+                    oddNumbers.Add(i);
+                    //Console.WriteLine("Odd numbers" + i);
+                }
+            }
+            Console.Write("This is Even numbers: ");
+            foreach (int evenNumber in evenNumbers){
+                Console.Write(evenNumber + " ");
+            }
+
+            Console.Write("\nThis is Odd numbers: ");
+            foreach (int oddNumber in oddNumbers){
+                Console.Write(oddNumber + " ");
+            }
+            // Console.Write($"This is Even numbers: {evenNumbers} \n This is Odd numbers: {oddNumbers}");
+
+
+
+
+
+
             // Console.WriteLine("Enter your password: ");
             // string password = Console.ReadLine();
 
@@ -177,12 +211,12 @@ namespace Exercise {
 
     // // }
 
-    List<string> names = new List<string>();
-    Console.WriteLine("Enter a name: ");
-    names.Add(Console.ReadLine());
-    for (int i = 0; i < names.Count; i++){
-       Console.WriteLine(names[i]);
-    }
+    // List<string> names = new List<string>();
+    // Console.WriteLine("Enter a name: ");
+    // names.Add(Console.ReadLine());
+    // for (int i = 0; i < names.Count; i++){
+    //    Console.WriteLine(names[i]);
+    // }
 
 
 
@@ -298,6 +332,21 @@ namespace Exercise {
 
             // int difference = firstNumber - secondNumber;
             // Console.WriteLine($"The difference of {firstNumber} and {secondNumber} is {difference}");
+
+            int num = 7;
+            int length = 5;
+
+            int[] numbers = new int[length];
+
+            for (int i = 0; i < length; i++)
+            {
+                numbers[i] = i * num;
+                Console.WriteLine(numbers[i]);
+            }
+
+        
+
+        
 
         }
     }
