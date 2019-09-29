@@ -137,29 +137,29 @@ namespace Exercise {
             //     {"username", "admin"},
             //     {"password", "password"}
             // };
-            List<int> evenNumbers = new List<int>();
+            // List<int> evenNumbers = new List<int>();
 
-            List<int> oddNumbers = new List<int>();
+            // List<int> oddNumbers = new List<int>();
 
-            for (int i = 1; i <= 40; i++){
-                if (i % 2 == 0){
-                    evenNumbers.Add(i);
-                   // Console.WriteLine("Even numbers" + i);
-                }
-                else{
-                    oddNumbers.Add(i);
-                    //Console.WriteLine("Odd numbers" + i);
-                }
-            }
-            Console.Write("This is Even numbers: ");
-            foreach (int evenNumber in evenNumbers){
-                Console.Write(evenNumber + " ");
-            }
+            // for (int i = 1; i <= 40; i++){
+            //     if (i % 2 == 0){
+            //         evenNumbers.Add(i);
+            //        // Console.WriteLine("Even numbers" + i);
+            //     }
+            //     else{
+            //         oddNumbers.Add(i);
+            //         //Console.WriteLine("Odd numbers" + i);
+            //     }
+            // }
+            // Console.Write("This is Even numbers: ");
+            // foreach (int evenNumber in evenNumbers){
+            //     Console.Write(evenNumber + " ");
+            // }
 
-            Console.Write("\nThis is Odd numbers: ");
-            foreach (int oddNumber in oddNumbers){
-                Console.Write(oddNumber + " ");
-            }
+            // Console.Write("\nThis is Odd numbers: ");
+            // foreach (int oddNumber in oddNumbers){
+            //     Console.Write(oddNumber + " ");
+            // }
             // Console.Write($"This is Even numbers: {evenNumbers} \n This is Odd numbers: {oddNumbers}");
 
 
@@ -333,21 +333,127 @@ namespace Exercise {
             // int difference = firstNumber - secondNumber;
             // Console.WriteLine($"The difference of {firstNumber} and {secondNumber} is {difference}");
 
-            int num = 7;
-            int length = 5;
+            
 
-            int[] numbers = new int[length];
-
-            for (int i = 0; i < length; i++)
-            {
-                numbers[i] = i * num;
-                Console.WriteLine(numbers[i]);
-            }
-
-        
+        //MultiplicationTable();
+        //WelcomeMessage();
+        Calculator();
 
         
 
         }
+
+
+
+         static void WelcomeMessage(){
+            Console.WriteLine("Welcome to my Application!!!");
+            
+        }
+        static void Calculator(){
+            Console.WriteLine("This is a Calculator!!!");
+            Console.WriteLine("Please choose an operation to perform:");
+            Console.WriteLine("Press (1) for Addition");
+            Console.WriteLine("Press (2) for Subtraction");
+            Console.WriteLine("Press (3) for Multiplication");
+            Console.WriteLine("Press (4) for Division");
+            Console.WriteLine("Press (5) for Exit");
+
+            //int arg1 = Convert.ToInt32(Console.ReadLine());
+            //int arg2 = Convert.ToInt32(Console.ReadLine());
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+            if (choice == 1){
+                Console.Write("Enter the first number to add: ");
+                int arg1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter the second number add: ");
+                int arg2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine($"The sum of {arg1} and {arg2} is: " + Add(arg1, arg2));
+            }
+            else if (choice == 2){
+                Console.Write("Enter the first number to subtract: ");
+                int arg1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter the second number to subtract: ");
+                int arg2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine($"The difference of {arg1} and {arg2} is: " + Subtract(arg1, arg2));
+            }
+            else if (choice == 3){
+                Console.Write("Enter the first number to multiply: ");
+                int arg1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter the second number to multiply: ");
+                int arg2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine($"The product of {arg1} and {arg2} is: " + Multiply(arg1, arg2));
+
+            }
+            else if (choice == 4){
+                Console.Write("Enter the first number to divide: ");
+                int arg1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter the second number to divide: ");
+                int arg2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine($"The division of {arg1} and {arg2} is: " + Divide(arg1, arg2));
+            }
+            else if (choice == 5){
+                Console.WriteLine("Goodbye!!!");
+            }
+            else{
+                Console.WriteLine("Invalid choice");
+            }
+            
+        }
+
+
+        // static int ReadInt(){
+        //     Console.WriteLine("Enter a number: ");
+        //     int number = Convert.ToInt32(Console.ReadLine());
+        //     return number;
+        // }
+        static int Add(int a, int b){
+            return a + b;
+        }
+
+        static int Subtract(int a, int b){
+            return a - b;
+        }
+        static int Multiply(int a, int b){
+            return a * b;
+        }
+        static int Divide(int a, int b){
+            return a / b;
+        }
+
+
+
+
+
+
+
+
+        // static public void MultiplicationTable(){
+        //     int num = 7;
+        //     int length = 5;
+
+        //     int[] result = new int[length];
+        //     int counter = 0;
+
+        //     for (int i = 1; i <= result.Length; i++)
+        //     {
+        //         result[counter] = i * num;
+        //         counter++;
+        //        // Console.WriteLine(numbers[i]);
+        //     }
+        //     foreach (int number in result)
+        //     {
+        //         Console.WriteLine(number);
+        //     }
+        // }
+
+       
     }
 }
