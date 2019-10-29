@@ -184,6 +184,35 @@ namespace Exercise {
             // else{
             //     Console.WriteLine("Please enter password");
             // }
+
+
+        Console.WriteLine("Enter the Width of the rectangle: ");
+        int width  = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Enter the Height of the rectangle: ");    
+        int height = Convert.ToInt32(Console.ReadLine());
+
+        CalculateArea(width, height);
+    }
+
+    static void CalculateArea(int width, int height){
+        int area = width * height;
+        Console.WriteLine("The area of the rectangle is: " + area);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //         Console.WriteLine("Enter your password again: ");
     //         string password = Console.ReadLine();
 
@@ -337,96 +366,79 @@ namespace Exercise {
 
         //MultiplicationTable();
         //WelcomeMessage();
-        Calculator();
+        // Calculator();
 
         
 
-        }
+        //}
 
 
 
-         static void WelcomeMessage(){
-            Console.WriteLine("Welcome to my Application!!!");
+        //  static void WelcomeMessage(){
+        //     Console.WriteLine("Welcome to my Application!!!");
             
-        }
-        static void Calculator(){
-            Console.WriteLine("This is a Calculator!!!");
-            Console.WriteLine("Please choose an operation to perform:");
-            Console.WriteLine("Press (1) for Addition");
-            Console.WriteLine("Press (2) for Subtraction");
-            Console.WriteLine("Press (3) for Multiplication");
-            Console.WriteLine("Press (4) for Division");
-            Console.WriteLine("Press (5) for Exit");
-
-            //int arg1 = Convert.ToInt32(Console.ReadLine());
-            //int arg2 = Convert.ToInt32(Console.ReadLine());
-
-            int choice = Convert.ToInt32(Console.ReadLine());
-            if (choice == 1){
-                Console.Write("Enter the first number to add: ");
-                int arg1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("Enter the second number add: ");
-                int arg2 = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine($"The sum of {arg1} and {arg2} is: " + Add(arg1, arg2));
-            }
-            else if (choice == 2){
-                Console.Write("Enter the first number to subtract: ");
-                int arg1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("Enter the second number to subtract: ");
-                int arg2 = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine($"The difference of {arg1} and {arg2} is: " + Subtract(arg1, arg2));
-            }
-            else if (choice == 3){
-                Console.Write("Enter the first number to multiply: ");
-                int arg1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("Enter the second number to multiply: ");
-                int arg2 = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine($"The product of {arg1} and {arg2} is: " + Multiply(arg1, arg2));
-
-            }
-            else if (choice == 4){
-                Console.Write("Enter the first number to divide: ");
-                int arg1 = Convert.ToInt32(Console.ReadLine());
-
-                Console.Write("Enter the second number to divide: ");
-                int arg2 = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine($"The division of {arg1} and {arg2} is: " + Divide(arg1, arg2));
-            }
-            else if (choice == 5){
-                Console.WriteLine("Goodbye!!!");
-            }
-            else{
-                Console.WriteLine("Invalid choice");
-            }
-            
-        }
-
-
-        // static int ReadInt(){
-        //     Console.WriteLine("Enter a number: ");
-        //     int number = Convert.ToInt32(Console.ReadLine());
-        //     return number;
         // }
-        static int Add(int a, int b){
-            return a + b;
+      
         }
+    };
 
-        static int Subtract(int a, int b){
-            return a - b;
-        }
-        static int Multiply(int a, int b){
-            return a * b;
-        }
-        static int Divide(int a, int b){
-            return a / b;
-        }
+        // static void Calculator(){
+        //     Console.WriteLine("This is a Calculator!!!");
+        //     Console.WriteLine("Please choose an operation to perform:");
+        //     Console.WriteLine("Press (1) for Addition");
+        //     Console.WriteLine("Press (2) for Subtraction");
+        //     Console.WriteLine("Press (3) for Multiplication");
+        //     Console.WriteLine("Press (4) for Division");
+        //     Console.WriteLine("Press (5) for Exit");
+
+        //     int choice = Convert.ToInt32(Console.ReadLine());
+        //     switch (choice)
+        //     {
+        //     case 1:
+        //         PerformOperation("add", Add);
+        //         break;
+        //     case 2:
+        //         PerformOperation("subtract", Subtract);
+        //         break;
+        //     case 3:
+        //         PerformOperation("multiply", Multiply);
+        //         break;
+        //     case 4:
+        //         PerformOperation("divide", Divide);
+        //         break;
+        //     case 5:
+        //         Console.WriteLine("Goodbye!!!");
+        //         break;
+        //     default:
+        //         Console.WriteLine("Invalid choice");
+        //         break;
+        //     }
+        // }
+
+        // static void PerformOperation(string operation, Func<int, int, int> func)
+        // {
+        //     Console.Write($"Enter the first number to {operation}: ");
+        //     int arg1 = Convert.ToInt32(Console.ReadLine());
+
+        //     Console.Write($"Enter the second number to {operation}: ");
+        //     int arg2 = Convert.ToInt32(Console.ReadLine());
+
+        //     Console.WriteLine($"The result of {operation}ing {arg1} and {arg2} is: " + func(arg1, arg2));
+        // }
+
+        // static int Add(int a, int b){
+        //     return a + b;
+        // }
+
+        // static int Subtract(int a, int b){
+        //     return a - b;
+        // }
+        // static int Multiply(int a, int b){
+        //     return a * b;
+        // }
+        // static int Divide(int a, int b){
+        //     return a / b;
+        // }
 
 
 
@@ -455,5 +467,3 @@ namespace Exercise {
         // }
 
        
-    }
-}
